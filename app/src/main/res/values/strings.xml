@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Data Usage</string>
+    <string name="full_month_data_usages">30 Days Data Usages</string>
+    <string name="two_month_data_usages">60 Days</string>
+    <string name="three_month_data_usages">90 Days</string>
+    <string name="wifi">WiFI</string>
+    <string name="mobile">Mobile</string>
+    <string name="last_30_days">Last 30 Days</string>
+</resources>
