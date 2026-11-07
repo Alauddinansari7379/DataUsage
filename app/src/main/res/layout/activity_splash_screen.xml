@@ -1,22 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-  <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_color_Dark"
+    android:background="@drawable/bg_liquid"
     tools:context="dev.jahidhasanco.datausage.SplashScreen">
-  <androidx.appcompat.widget.AppCompatImageView
-      android:layout_width="180dp"
-      android:layout_height="180dp"
-      android:background="@drawable/lonew"
-      android:text="Splash Screen"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
 
-  </androidx.appcompat.widget.AppCompatImageView>
+    <dev.jahidhasanco.datausage.presentation.view.GlassCardView
+        android:id="@+id/logoGlass"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        app:glassAlpha="0.2"
+        app:glassCornerRadius="46dp"
+        app:glassGlow="@color/accent_cyan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/lonew" />
+    </dev.jahidhasanco.datausage.presentation.view.GlassCardView>
+
+    <TextView
+        android:id="@+id/splashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:letterSpacing="0.2"
+        android:text="@string/app_name"
+        android:textColor="@color/text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoGlass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,91 @@
 <resources>
     <string name="app_name">Data Usage</string>
-    <string name="full_month_data_usages">30 Days Data Usages</string>
-    <string name="two_month_data_usages">60 Days</string>
-    <string name="three_month_data_usages">90 Days</string>
-    <string name="wifi">WiFI</string>
+
+    <!-- ===== Dashboard ===== -->
+    <string name="title_dashboard">Data Usage</string>
+    <string name="live_throughput">LIVE THROUGHPUT</string>
+    <string name="download">Download</string>
+    <string name="upload">Upload</string>
     <string name="mobile">Mobile</string>
-    <string name="last_30_days">Last 30 Days</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="date">Date</string>
+
+    <string name="hourly_title">Today, hour by hour</string>
+    <string name="hourly_subtitle">Combined mobile and Wi-Fi</string>
+    <string name="breakdown_title">Daily breakdown</string>
+    <string name="apps_title">Top apps</string>
+    <string name="apps_subtitle">By total traffic in the selected range</string>
+    <string name="summary_title">Summary</string>
+
+    <string name="stat_total">Total used</string>
+    <string name="stat_average">Daily average</string>
+    <string name="stat_peak">Busiest day</string>
+    <string name="stat_projection">30-day projection</string>
+
+    <!-- ===== Ranges ===== -->
+    <string name="range_7">7 Days</string>
+    <string name="range_30">30 Days</string>
+    <string name="range_60">60 Days</string>
+    <string name="range_90">90 Days</string>
+    <string name="range_title_7">Last 7 Days</string>
+    <string name="range_title_30">Last 30 Days</string>
+    <string name="range_title_60">Last 60 Days</string>
+    <string name="range_title_90">Last 90 Days</string>
+
+    <!-- ===== Trend ===== -->
+    <string name="trend_up">+%1$d%% vs previous</string>
+    <string name="trend_down">%1$d%% vs previous</string>
+    <string name="trend_flat">Steady vs previous</string>
+
+    <!-- ===== Connection ===== -->
+    <string name="conn_offline">Offline</string>
+    <string name="conn_connected">Connected</string>
+
+    <!-- ===== App-list fallback names ===== -->
+    <string name="app_tethering">Tethering</string>
+    <string name="app_uninstalled">Uninstalled apps</string>
+    <string name="app_system">Android System</string>
+    <string name="app_unknown">System service (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">App icon</string>
+
+    <!-- ===== Permission gate ===== -->
+    <string name="permission_title">Usage access required</string>
+    <string name="permission_body">Android only reports per-app and historical data usage to apps with Usage Access. Grant it to see your traffic.</string>
+    <string name="permission_action">Open settings</string>
+    <string name="permission_toast">Please allow usage access to see your data</string>
+
+    <!-- ===== Empty / error ===== -->
+    <string name="no_apps">No app traffic recorded in this range</string>
+    <string name="no_usage_yet">No usage recorded yet</string>
+    <string name="load_failed">Could not read usage data</string>
+
+    <!-- ===== Language picker ===== -->
+    <string name="language">Language</string>
+    <string name="language_system">System default</string>
+
+    <plurals name="day_count">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+
+    <!-- Unit symbols. Translators: keep these short; they sit inside dense tiles. -->
+    <string-array name="byte_units">
+        <item>B</item>
+        <item>KB</item>
+        <item>MB</item>
+        <item>GB</item>
+        <item>TB</item>
+        <item>PB</item>
+    </string-array>
+    <string-array name="speed_units">
+        <item>B/s</item>
+        <item>kB/s</item>
+        <item>MB/s</item>
+    </string-array>
+    <string-array name="speed_units_bits">
+        <item>b/s</item>
+        <item>kb/s</item>
+        <item>mb/s</item>
+    </string-array>
 </resources>

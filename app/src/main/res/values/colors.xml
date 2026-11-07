@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="main_color_Dark">#003057</color>
-    <color name="main_color">#074a7f</color>
-    <color name="sky_color">#7bc6db</color>
+    <!-- ============ Liquid glass palette ============ -->
+    <!-- Deep background stops. The gradient runs top-left to bottom-right. -->
+    <color name="bg_deep">#FF050817</color>
+    <color name="bg_mid">#FF0E1236</color>
+    <color name="bg_violet">#FF1B1046</color>
+    <color name="bg_teal">#FF06263F</color>
+
+    <!-- Coloured light sources sitting behind the glass. -->
+    <color name="blob_cyan">#664DE8FF</color>
+    <color name="blob_violet">#66A78BFA</color>
+    <color name="blob_magenta">#4DFF5FA2</color>
+    <color name="blob_mint">#405EF2C0</color>
+
+    <!-- Glass body: white at low alpha, brighter at the top edge. -->
+    <color name="glass_fill_top">#26FFFFFF</color>
+    <color name="glass_fill_bottom">#0FFFFFFF</color>
+    <color name="glass_fill_flat">#1AFFFFFF</color>
+    <color name="glass_fill_strong">#33FFFFFF</color>
+
+    <!-- Rim light: the bright bevel that sells the 3D edge. -->
+    <color name="glass_rim_light">#8CFFFFFF</color>
+    <color name="glass_rim_dark">#14FFFFFF</color>
+    <color name="glass_specular">#59FFFFFF</color>
+
+    <!-- Accents -->
+    <color name="accent_cyan">#FF4DE8FF</color>
+    <color name="accent_violet">#FFA78BFA</color>
+    <color name="accent_mint">#FF5EF2C0</color>
+    <color name="accent_coral">#FFFF7A8A</color>
+    <color name="accent_amber">#FFFFC46B</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFF2F5FF</color>
+    <color name="text_secondary">#B3C7CEEA</color>
+    <color name="text_tertiary">#A6B6BEDC</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Retained so any older layout/reference keeps resolving. -->
+    <color name="main_color">#FF4DE8FF</color>
+    <color name="main_color_Dark">#FF0E1236</color>
+    <color name="sky_color">#FF7BC6DB</color>
+    <color name="gray_text_color">#B3C7CEEA</color>
+    <color name="gray">#7AA7B0D4</color>
+    <color name="red">#FFFF7A8A</color>
+    <color name="button_color">#FF5EF2C0</color>
+    <color name="purple_200">#FFA78BFA</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="red">#B71C1C</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="button_color">#39b27c</color>
-    <color name="gray_text_color">#777777</color>
-    <color name="_324754">#324754</color>
-    <color name="gray">#aeb2b7</color>
+    <color name="_324754">#FF324754</color>
 </resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Penggunaan Data</string>
+    <string name="title_dashboard">Penggunaan Data</string>
+    <string name="live_throughput">KECEPATAN LANGSUNG</string>
+    <string name="download">Unduh</string>
+    <string name="upload">Unggah</string>
+    <string name="mobile">Seluler</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="date">Tanggal</string>
+    <string name="hourly_title">Hari ini, per jam</string>
+    <string name="hourly_subtitle">Seluler dan Wi-Fi digabung</string>
+    <string name="breakdown_title">Rincian harian</string>
+    <string name="apps_title">Aplikasi teratas</string>
+    <string name="apps_subtitle">Berdasarkan total trafik pada rentang terpilih</string>
+    <string name="summary_title">Ringkasan</string>
+    <string name="stat_total">Total terpakai</string>
+    <string name="stat_average">Rata-rata harian</string>
+    <string name="stat_peak">Hari tersibuk</string>
+    <string name="stat_projection">Proyeksi 30 hari</string>
+    <string name="range_7">7 Hari</string>
+    <string name="range_30">30 Hari</string>
+    <string name="range_60">60 Hari</string>
+    <string name="range_90">90 Hari</string>
+    <string name="range_title_7">7 Hari Terakhir</string>
+    <string name="range_title_30">30 Hari Terakhir</string>
+    <string name="range_title_60">60 Hari Terakhir</string>
+    <string name="range_title_90">90 Hari Terakhir</string>
+    <string name="trend_up">+%1$d%% vs sebelumnya</string>
+    <string name="trend_down">%1$d%% vs sebelumnya</string>
+    <string name="trend_flat">Stabil</string>
+    <string name="conn_offline">Offline</string>
+    <string name="conn_connected">Terhubung</string>
+    <string name="app_tethering">Tethering</string>
+    <string name="app_uninstalled">Aplikasi yang dihapus</string>
+    <string name="app_system">Sistem Android</string>
+    <string name="app_unknown">Layanan sistem (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">Ikon aplikasi</string>
+    <string name="permission_title">Perlu akses penggunaan</string>
+    <string name="permission_body">Android hanya memberikan data penggunaan per aplikasi dan riwayatnya kepada aplikasi yang punya Akses Penggunaan. Berikan izin untuk melihat trafik Anda.</string>
+    <string name="permission_action">Buka setelan</string>
+    <string name="permission_toast">Izinkan akses penggunaan untuk melihat data Anda</string>
+    <string name="no_apps">Tidak ada trafik aplikasi pada rentang ini</string>
+    <string name="no_usage_yet">Belum ada penggunaan tercatat</string>
+    <string name="load_failed">Tidak dapat membaca data penggunaan</string>
+    <string name="language">Bahasa</string>
+    <string name="language_system">Default sistem</string>
+
+    <plurals name="day_count">
+        <item quantity="other">%1$d hari</item>
+    </plurals>
+</resources>

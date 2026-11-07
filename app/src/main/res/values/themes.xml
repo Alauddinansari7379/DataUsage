@@ -1,18 +1,73 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.AppCompat.DayNight" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:forceDarkAllowed" tools:targateApi="q" tools:targetApi="q">false</item>
 
-        <!-- Primary brand color. -->
-         <item name="colorPrimary">@color/main_color</item>
-        <item name="colorPrimaryVariant">@color/main_color_Dark</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/main_color</item>
-        <item name="colorSecondaryVariant">@color/main_color_Dark</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <!-- Glass reads best on a dark ground, so the app pins a dark theme rather
+         than following the system. -->
+    <style name="Theme.DataUsage" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/accent_cyan</item>
+        <item name="colorPrimaryVariant">@color/bg_mid</item>
+        <item name="colorOnPrimary">@color/bg_deep</item>
+        <item name="colorSecondary">@color/accent_violet</item>
+        <item name="colorSecondaryVariant">@color/accent_mint</item>
+        <item name="colorOnSecondary">@color/bg_deep</item>
+
+        <item name="android:colorBackground">@color/bg_deep</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Transparent bars so the gradient runs edge to edge. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/bg_deep</item>
+    </style>
+
+    <style name="Theme.DataUsage.Splash" parent="Theme.DataUsage" />
+
+    <style name="Theme.DataUsage.Dialog" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:background">@color/bg_mid</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="colorAccent">@color/accent_cyan</item>
+        <item name="android:windowTitleStyle">@style/GlassDialogTitle</item>
+    </style>
+
+    <style name="GlassDialogTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="GlassSectionTitle">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="GlassCaption">
+        <item name="android:textColor">@color/text_tertiary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <style name="GlassRangePill">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="GlassStatValue">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
     </style>
 </resources>

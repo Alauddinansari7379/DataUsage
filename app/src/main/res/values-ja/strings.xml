@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">データ使用量</string>
+    <string name="title_dashboard">データ使用量</string>
+    <string name="live_throughput">現在の通信速度</string>
+    <string name="download">ダウンロード</string>
+    <string name="upload">アップロード</string>
+    <string name="mobile">モバイル</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="date">日付</string>
+    <string name="hourly_title">今日の時間別</string>
+    <string name="hourly_subtitle">モバイルとWi-Fiの合計</string>
+    <string name="breakdown_title">日別の内訳</string>
+    <string name="apps_title">使用量の多いアプリ</string>
+    <string name="apps_subtitle">選択期間の合計通信量順</string>
+    <string name="summary_title">サマリー</string>
+    <string name="stat_total">合計使用量</string>
+    <string name="stat_average">1日あたり平均</string>
+    <string name="stat_peak">最も多い日</string>
+    <string name="stat_projection">30日間の予測</string>
+    <string name="range_7">7日間</string>
+    <string name="range_30">30日間</string>
+    <string name="range_60">60日間</string>
+    <string name="range_90">90日間</string>
+    <string name="range_title_7">過去7日間</string>
+    <string name="range_title_30">過去30日間</string>
+    <string name="range_title_60">過去60日間</string>
+    <string name="range_title_90">過去90日間</string>
+    <string name="trend_up">前期間比 +%1$d%%</string>
+    <string name="trend_down">前期間比 %1$d%%</string>
+    <string name="trend_flat">前期間と同程度</string>
+    <string name="conn_offline">オフライン</string>
+    <string name="conn_connected">接続済み</string>
+    <string name="app_tethering">テザリング</string>
+    <string name="app_uninstalled">アンインストール済みアプリ</string>
+    <string name="app_system">Android システム</string>
+    <string name="app_unknown">システムサービス (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">アプリのアイコン</string>
+    <string name="permission_title">使用状況へのアクセスが必要です</string>
+    <string name="permission_body">Android はアプリ別および過去のデータ使用量を、使用状況へのアクセスが許可されたアプリにのみ提供します。許可すると通信量を確認できます。</string>
+    <string name="permission_action">設定を開く</string>
+    <string name="permission_toast">使用状況へのアクセスを許可してください</string>
+    <string name="no_apps">この期間のアプリ通信はありません</string>
+    <string name="no_usage_yet">まだ使用量が記録されていません</string>
+    <string name="load_failed">使用量データを読み取れませんでした</string>
+    <string name="language">言語</string>
+    <string name="language_system">システムのデフォルト</string>
+
+    <plurals name="day_count">
+        <item quantity="other">%1$d日間</item>
+    </plurals>
+</resources>

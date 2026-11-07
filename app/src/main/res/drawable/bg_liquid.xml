@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The scene behind the glass: a deep diagonal gradient with four soft
+     coloured light sources. Drawn as radial gradients rather than an image so it
+     scales to any screen without a bitmap asset. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:startColor="@color/bg_deep"
+                android:centerColor="@color/bg_violet"
+                android:endColor="@color/bg_teal"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Cyan light, upper left -->
+    <item
+        android:left="-140dp"
+        android:top="-180dp"
+        android:right="120dp"
+        android:bottom="380dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="220dp"
+                android:startColor="@color/blob_cyan"
+                android:endColor="@color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Violet light, upper right -->
+    <item
+        android:left="150dp"
+        android:top="-120dp"
+        android:right="-160dp"
+        android:bottom="320dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200dp"
+                android:startColor="@color/blob_violet"
+                android:endColor="@color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Magenta light, mid right -->
+    <item
+        android:left="180dp"
+        android:top="300dp"
+        android:right="-200dp"
+        android:bottom="-80dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="240dp"
+                android:startColor="@color/blob_magenta"
+                android:endColor="@color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Mint light, lower left -->
+    <item
+        android:left="-180dp"
+        android:top="420dp"
+        android:right="180dp"
+        android:bottom="-160dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="220dp"
+                android:startColor="@color/blob_mint"
+                android:endColor="@color/transparent" />
+        </shape>
+    </item>
+
+</layer-list>

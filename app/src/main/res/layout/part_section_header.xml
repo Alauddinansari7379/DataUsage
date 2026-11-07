@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/headerIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chart" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/headerTitle"
+                style="@style/GlassSectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Top apps" />
+
+            <TextView
+                android:id="@+id/headerSubtitle"
+                style="@style/GlassCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                tools:text="By total traffic" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/headerBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/glass_chip"
+            android:paddingStart="9dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:visibility="gone"
+            tools:text="30 Days"
+            tools:visibility="visible" />
+    </LinearLayout>
+</layout>

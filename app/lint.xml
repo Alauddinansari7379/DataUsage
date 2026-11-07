@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!--
+        Indonesian ships as values-b+id, the explicit BCP-47 qualifier, so the
+        resource folder, the localeConfig entry and the in-app picker tag all
+        read "id" and agree with each other.
+
+        LocaleFolder only knows the legacy "in" spelling and does not recognise
+        the b+ form, so it reports a false positive here. b+ qualifiers are
+        honoured from API 21 and this module's minSdk is 23.
+    -->
+    <issue id="LocaleFolder">
+        <ignore path="src/main/res/values-b+id" />
+    </issue>
+</lint>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GlassCardView">
+        <attr name="glassCornerRadius" format="dimension" />
+        <attr name="glassAlpha" format="float" />
+        <attr name="glassGlow" format="color" />
+        <attr name="glassGrain" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LiquidGaugeView">
+        <attr name="gaugeLabel" format="string" />
+        <attr name="gaugeThickness" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="GlassBarChartView">
+        <attr name="barCornerRadius" format="dimension" />
+    </declare-styleable>
+</resources>

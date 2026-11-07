@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Veri Kullanımı</string>
+    <string name="title_dashboard">Veri Kullanımı</string>
+    <string name="live_throughput">ANLIK HIZ</string>
+    <string name="download">İndirme</string>
+    <string name="upload">Yükleme</string>
+    <string name="mobile">Mobil</string>
+    <string name="wifi">Kablosuz</string>
+    <string name="date">Tarih</string>
+    <string name="hourly_title">Bugün, saatlere göre</string>
+    <string name="hourly_subtitle">Mobil ve kablosuz toplamı</string>
+    <string name="breakdown_title">Günlük döküm</string>
+    <string name="apps_title">En çok veri kullanan uygulamalar</string>
+    <string name="apps_subtitle">Seçili aralıktaki toplam trafiğe göre</string>
+    <string name="summary_title">Özet</string>
+    <string name="stat_total">Toplam kullanım</string>
+    <string name="stat_average">Günlük ortalama</string>
+    <string name="stat_peak">En yoğun gün</string>
+    <string name="stat_projection">30 günlük tahmin</string>
+    <string name="range_7">7 Gün</string>
+    <string name="range_30">30 Gün</string>
+    <string name="range_60">60 Gün</string>
+    <string name="range_90">90 Gün</string>
+    <string name="range_title_7">Son 7 Gün</string>
+    <string name="range_title_30">Son 30 Gün</string>
+    <string name="range_title_60">Son 60 Gün</string>
+    <string name="range_title_90">Son 90 Gün</string>
+    <string name="trend_up">Öncekine göre +%1$d%%</string>
+    <string name="trend_down">Öncekine göre %1$d%%</string>
+    <string name="trend_flat">Değişim yok</string>
+    <string name="conn_offline">Çevrimdışı</string>
+    <string name="conn_connected">Bağlı</string>
+    <string name="app_tethering">İnternet paylaşımı</string>
+    <string name="app_uninstalled">Kaldırılan uygulamalar</string>
+    <string name="app_system">Android Sistemi</string>
+    <string name="app_unknown">Sistem servisi (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">Uygulama simgesi</string>
+    <string name="permission_title">Kullanım erişimi gerekli</string>
+    <string name="permission_body">Android, uygulama bazlı ve geçmiş veri kullanımını yalnızca Kullanım Erişimi olan uygulamalara bildirir. Trafiğinizi görmek için izin verin.</string>
+    <string name="permission_action">Ayarları aç</string>
+    <string name="permission_toast">Verilerinizi görmek için kullanım erişimine izin verin</string>
+    <string name="no_apps">Bu aralıkta uygulama trafiği kaydedilmedi</string>
+    <string name="no_usage_yet">Henüz kullanım kaydedilmedi</string>
+    <string name="load_failed">Kullanım verileri okunamadı</string>
+    <string name="language">Dil</string>
+    <string name="language_system">Sistem varsayılanı</string>
+
+    <plurals name="day_count">
+        <item quantity="one">%1$d gün</item>
+        <item quantity="other">%1$d gün</item>
+    </plurals>
+</resources>

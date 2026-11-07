@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Consommation de données</string>
+    <string name="title_dashboard">Consommation de données</string>
+    <string name="live_throughput">DÉBIT EN DIRECT</string>
+    <string name="download">Téléchargement</string>
+    <string name="upload">Envoi</string>
+    <string name="mobile">Mobile</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="date">Date</string>
+    <string name="hourly_title">Aujourd\'hui, heure par heure</string>
+    <string name="hourly_subtitle">Mobile et Wi-Fi cumulés</string>
+    <string name="breakdown_title">Détail par jour</string>
+    <string name="apps_title">Applis les plus gourmandes</string>
+    <string name="apps_subtitle">Par consommation totale sur la période choisie</string>
+    <string name="summary_title">Résumé</string>
+    <string name="stat_total">Total consommé</string>
+    <string name="stat_average">Moyenne par jour</string>
+    <string name="stat_peak">Jour le plus chargé</string>
+    <string name="stat_projection">Projection sur 30 jours</string>
+    <string name="range_7">7 jours</string>
+    <string name="range_30">30 jours</string>
+    <string name="range_60">60 jours</string>
+    <string name="range_90">90 jours</string>
+    <string name="range_title_7">7 derniers jours</string>
+    <string name="range_title_30">30 derniers jours</string>
+    <string name="range_title_60">60 derniers jours</string>
+    <string name="range_title_90">90 derniers jours</string>
+    <string name="trend_up">+%1$d%% vs précédent</string>
+    <string name="trend_down">%1$d%% vs précédent</string>
+    <string name="trend_flat">Stable</string>
+    <string name="conn_offline">Hors ligne</string>
+    <string name="conn_connected">Connecté</string>
+    <string name="app_tethering">Partage de connexion</string>
+    <string name="app_uninstalled">Applis désinstallées</string>
+    <string name="app_system">Système Android</string>
+    <string name="app_unknown">Service système (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">Icône de l\'appli</string>
+    <string name="permission_title">Accès aux données d\'usage requis</string>
+    <string name="permission_body">Android ne communique la consommation par appli et son historique qu\'aux applis disposant de l\'accès aux données d\'usage. Autorisez-le pour voir votre trafic.</string>
+    <string name="permission_action">Ouvrir les paramètres</string>
+    <string name="permission_toast">Autorisez l\'accès aux données d\'usage</string>
+    <string name="no_apps">Aucune consommation d\'appli sur cette période</string>
+    <string name="no_usage_yet">Aucune consommation enregistrée</string>
+    <string name="load_failed">Impossible de lire les données d\'usage</string>
+    <string name="language">Langue</string>
+    <string name="language_system">Paramètre du système</string>
+
+    <plurals name="day_count">
+        <item quantity="one">%1$d jour</item>
+        <item quantity="many">%1$d jours</item>
+        <item quantity="other">%1$d jours</item>
+    </plurals>
+
+    <string-array name="byte_units">
+        <item>o</item>
+        <item>Ko</item>
+        <item>Mo</item>
+        <item>Go</item>
+        <item>To</item>
+        <item>Po</item>
+    </string-array>
+    <string-array name="speed_units">
+        <item>o/s</item>
+        <item>Ko/s</item>
+        <item>Mo/s</item>
+    </string-array>
+    <string-array name="speed_units_bits">
+        <item>bit/s</item>
+        <item>Kbit/s</item>
+        <item>Mbit/s</item>
+    </string-array>
+</resources>

@@ -23,7 +23,10 @@ public class AppProgressBar {
             dialog.setCancelable(false);
             dialog.setContentView(R.layout.custom_loader);
 
-            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+            if (dialog.getWindow() != null) {
+                dialog.getWindow().setBackgroundDrawable(
+                        new ColorDrawable(android.graphics.Color.TRANSPARENT));
+            }
             dialog.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -36,6 +39,10 @@ public class AppProgressBar {
                 dialog.dismiss();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            // The field is static, so holding the dismissed dialog keeps its
+            // Activity context alive for the life of the process.
+            dialog = null;
         }
     }
 }

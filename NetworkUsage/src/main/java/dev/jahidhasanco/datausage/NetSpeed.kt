@@ -1,80 +1,119 @@
 package dev.jahidhasanco.datausage
 
-import java.util.*
-import kotlin.collections.List
+import java.util.Locale
 
 data class Speed(
     val speed: String,
     val unit: String
-)
+) {
+    /** The value and unit joined, e.g. `2.1 MB/s`. */
+    val display: String get() = "$speed $unit"
+}
 
 object NetSpeed {
 
-    private var speedValue = ""
-    private var speedUnit = ""
+    private const val KILO = 1000L
+    private const val MEGA = 1_000_000L
 
-    private var totalSpeed: Long = 0L
-    private var downSpeed: Long = 0L
-    private var upSpeed: Long = 0L
+    /** Bytes-per-second labels, ordered B/s, kB/s, MB/s. */
+    val DEFAULT_BYTE_UNITS: List<String> = listOf("B/s", "kB/s", "MB/s")
+
+    /** Bits-per-second labels, ordered b/s, kb/s, mb/s. */
+    val DEFAULT_BIT_UNITS: List<String> = listOf("b/s", "kb/s", "mb/s")
+
+    @Volatile
     private var isSpeedUnitBits: Boolean = false
+
+    @Volatile
+    private var byteUnitOverride: List<String>? = null
+
+    @Volatile
+    private var bitUnitOverride: List<String>? = null
+
+    @Volatile
+    private var localeOverride: Locale? = null
 
     fun setSpeedUnitBits(isSpeedUnitBits: Boolean) {
         this.isSpeedUnitBits = isSpeedUnitBits
     }
 
-    fun getSpeedUnitBits(): Boolean {
-        return isSpeedUnitBits
+    fun getSpeedUnitBits(): Boolean = isSpeedUnitBits
+
+    /** Supplies localized rate labels; each list must hold three entries. */
+    fun configure(
+        byteUnits: List<String>? = null,
+        bitUnits: List<String>? = null,
+        locale: Locale? = null
+    ) {
+        if (byteUnits != null && byteUnits.size == 3) byteUnitOverride = byteUnits
+        if (bitUnits != null && bitUnits.size == 3) bitUnitOverride = bitUnits
+        localeOverride = locale
     }
 
-    private fun getSpeed(s: Long): Speed {
-        var speed = s
+    /** Drops any [configure] call, restoring Latin units and the default locale. */
+    fun reset() {
+        byteUnitOverride = null
+        bitUnitOverride = null
+        localeOverride = null
+        isSpeedUnitBits = false
+    }
 
-        if (isSpeedUnitBits) {
-            speed *= 8
-        }
+    private fun units(): List<String> = if (isSpeedUnitBits) {
+        bitUnitOverride ?: DEFAULT_BIT_UNITS
+    } else {
+        byteUnitOverride ?: DEFAULT_BYTE_UNITS
+    }
 
-        if (speed < 1000000) {
-            speedUnit =
-                if (isSpeedUnitBits) "kb/s" else "kB/s"
-            speedValue = (speed / 1000).toString()
-        } else if (speed >= 1000000) {
-            speedUnit =
-                if (isSpeedUnitBits) "mb/s" else "MB/s"
+    /**
+     * Format a byte-per-second rate for display.
+     *
+     * Rates are clamped at zero: a negative delta only happens when the
+     * underlying counters roll over at reboot, and rendering "-3 MB/s" would be
+     * meaningless.
+     */
+    fun getSpeed(bytesPerSecond: Long): Speed {
+        val units = units()
+        val locale = localeOverride ?: Locale.getDefault()
+        val base = bytesPerSecond.coerceAtLeast(0)
+        val speed = if (isSpeedUnitBits) base * 8 else base
 
-            speedValue = if (speed < 10000000) {
-                java.lang.String.format(Locale.ENGLISH, "%.1f", speed / 1000000.0)
-            } else if (speed < 100000000) {
-                (speed / 1000000).toString()
-            } else {
-                "99+"
+        return when {
+            speed < KILO -> Speed(speed.toString(), units[0])
+
+            speed < MEGA -> Speed((speed / KILO).toString(), units[1])
+
+            else -> {
+                val value = when {
+                    speed < 10 * MEGA -> String.format(locale, "%.1f", speed / MEGA.toDouble())
+                    speed < 100 * MEGA -> (speed / MEGA).toString()
+                    else -> "99+"
+                }
+                Speed(value, units[2])
             }
-        } else {
-            speedValue = "-"
-            speedUnit = "-"
         }
-
-        return Speed(speedValue, speedUnit)
     }
 
+    /**
+     * Convert a sample into total/down/up rates.
+     *
+     * Returns three entries in that fixed order; a non-positive [timeTaken] yields
+     * zeroed rates rather than dividing by zero.
+     */
     fun calculateSpeed(timeTaken: Long, downBytes: Long, upBytes: Long): List<Speed> {
-        var totalSpeed: Long = 0
-        var downSpeed: Long = 0
-        var upSpeed: Long = 0
-        val totalBytes = downBytes + upBytes
+        var totalSpeed = 0L
+        var downSpeed = 0L
+        var upSpeed = 0L
+
         if (timeTaken > 0) {
-            totalSpeed = totalBytes * 1000 / timeTaken
+            totalSpeed = (downBytes + upBytes) * 1000 / timeTaken
             downSpeed = downBytes * 1000 / timeTaken
             upSpeed = upBytes * 1000 / timeTaken
         }
-        this.totalSpeed = totalSpeed
-        this.downSpeed = downSpeed
-        this.upSpeed = upSpeed
 
-        return listOf(
-            getSpeed(totalSpeed),
-            getSpeed(downSpeed),
-            getSpeed(upSpeed)
-        )
+        return listOf(getSpeed(totalSpeed), getSpeed(downSpeed), getSpeed(upSpeed))
     }
 
+    /** Raw bytes-per-second for a sample, for gauges that need a number not a label. */
+    fun bytesPerSecond(timeTaken: Long, bytes: Long): Long =
+        if (timeTaken > 0) bytes * 1000 / timeTaken else 0L
 }

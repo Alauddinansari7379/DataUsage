@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Uso de datos</string>
+    <string name="title_dashboard">Uso de datos</string>
+    <string name="live_throughput">VELOCIDAD EN VIVO</string>
+    <string name="download">Descarga</string>
+    <string name="upload">Subida</string>
+    <string name="mobile">Móvil</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="date">Fecha</string>
+    <string name="hourly_title">Hoy, hora a hora</string>
+    <string name="hourly_subtitle">Móvil y Wi-Fi combinados</string>
+    <string name="breakdown_title">Desglose diario</string>
+    <string name="apps_title">Apps que más consumen</string>
+    <string name="apps_subtitle">Por consumo total en el periodo seleccionado</string>
+    <string name="summary_title">Resumen</string>
+    <string name="stat_total">Total consumido</string>
+    <string name="stat_average">Media diaria</string>
+    <string name="stat_peak">Día de mayor consumo</string>
+    <string name="stat_projection">Proyección a 30 días</string>
+    <string name="range_7">7 días</string>
+    <string name="range_30">30 días</string>
+    <string name="range_60">60 días</string>
+    <string name="range_90">90 días</string>
+    <string name="range_title_7">Últimos 7 días</string>
+    <string name="range_title_30">Últimos 30 días</string>
+    <string name="range_title_60">Últimos 60 días</string>
+    <string name="range_title_90">Últimos 90 días</string>
+    <string name="trend_up">+%1$d%% vs anterior</string>
+    <string name="trend_down">%1$d%% vs anterior</string>
+    <string name="trend_flat">Sin cambios</string>
+    <string name="conn_offline">Sin conexión</string>
+    <string name="conn_connected">Conectado</string>
+    <string name="app_tethering">Compartir conexión</string>
+    <string name="app_uninstalled">Apps desinstaladas</string>
+    <string name="app_system">Sistema Android</string>
+    <string name="app_unknown">Servicio del sistema (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">Icono de la app</string>
+    <string name="permission_title">Se requiere acceso de uso</string>
+    <string name="permission_body">Android solo comparte el consumo por app y el histórico con las apps que tienen acceso de uso. Concédelo para ver tu tráfico.</string>
+    <string name="permission_action">Abrir ajustes</string>
+    <string name="permission_toast">Permite el acceso de uso para ver tus datos</string>
+    <string name="no_apps">Sin consumo de apps en este periodo</string>
+    <string name="no_usage_yet">Aún no hay consumo registrado</string>
+    <string name="load_failed">No se pudieron leer los datos de uso</string>
+    <string name="language">Idioma</string>
+    <string name="language_system">Predeterminado del sistema</string>
+
+    <plurals name="day_count">
+        <item quantity="one">%1$d día</item>
+        <item quantity="many">%1$d días</item>
+        <item quantity="other">%1$d días</item>
+    </plurals>
+</resources>

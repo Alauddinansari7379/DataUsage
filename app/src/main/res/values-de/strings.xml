@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Datenverbrauch</string>
+    <string name="title_dashboard">Datenverbrauch</string>
+    <string name="live_throughput">AKTUELLER DURCHSATZ</string>
+    <string name="download">Download</string>
+    <string name="upload">Upload</string>
+    <string name="mobile">Mobilfunk</string>
+    <string name="wifi">WLAN</string>
+    <string name="date">Datum</string>
+    <string name="hourly_title">Heute, Stunde für Stunde</string>
+    <string name="hourly_subtitle">Mobilfunk und WLAN zusammen</string>
+    <string name="breakdown_title">Tagesübersicht</string>
+    <string name="apps_title">Top-Apps</string>
+    <string name="apps_subtitle">Nach Gesamtverbrauch im gewählten Zeitraum</string>
+    <string name="summary_title">Übersicht</string>
+    <string name="stat_total">Gesamt verbraucht</string>
+    <string name="stat_average">Tagesdurchschnitt</string>
+    <string name="stat_peak">Stärkster Tag</string>
+    <string name="stat_projection">30-Tage-Prognose</string>
+    <string name="range_7">7 Tage</string>
+    <string name="range_30">30 Tage</string>
+    <string name="range_60">60 Tage</string>
+    <string name="range_90">90 Tage</string>
+    <string name="range_title_7">Letzte 7 Tage</string>
+    <string name="range_title_30">Letzte 30 Tage</string>
+    <string name="range_title_60">Letzte 60 Tage</string>
+    <string name="range_title_90">Letzte 90 Tage</string>
+    <string name="trend_up">+%1$d%% ggü. zuvor</string>
+    <string name="trend_down">%1$d%% ggü. zuvor</string>
+    <string name="trend_flat">Unverändert</string>
+    <string name="conn_offline">Offline</string>
+    <string name="conn_connected">Verbunden</string>
+    <string name="app_tethering">Tethering</string>
+    <string name="app_uninstalled">Deinstallierte Apps</string>
+    <string name="app_system">Android-System</string>
+    <string name="app_unknown">Systemdienst (UID %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">App-Symbol</string>
+    <string name="permission_title">Zugriff auf Nutzungsdaten nötig</string>
+    <string name="permission_body">Android gibt app-bezogene und historische Verbrauchsdaten nur an Apps mit Zugriff auf Nutzungsdaten weiter. Erteile die Berechtigung, um deinen Verbrauch zu sehen.</string>
+    <string name="permission_action">Einstellungen öffnen</string>
+    <string name="permission_toast">Bitte Zugriff auf Nutzungsdaten erlauben</string>
+    <string name="no_apps">In diesem Zeitraum kein App-Verbrauch erfasst</string>
+    <string name="no_usage_yet">Noch kein Verbrauch erfasst</string>
+    <string name="load_failed">Verbrauchsdaten konnten nicht gelesen werden</string>
+    <string name="language">Sprache</string>
+    <string name="language_system">Systemstandard</string>
+
+    <plurals name="day_count">
+        <item quantity="one">%1$d Tag</item>
+        <item quantity="other">%1$d Tage</item>
+    </plurals>
+</resources>

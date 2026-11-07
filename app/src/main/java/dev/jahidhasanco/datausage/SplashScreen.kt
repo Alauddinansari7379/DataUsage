@@ -1,28 +1,34 @@
 package dev.jahidhasanco.datausage
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.view.WindowManager
-import com.alauddin.datausagen.R
- import com.alauddin.datausagen.databinding.ActivitySplashScreenBinding
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.lifecycle.lifecycleScope
+import com.alauddin.datausagen.databinding.ActivitySplashScreenBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SplashScreen : AppCompatActivity() {
+
     private lateinit var binding: ActivitySplashScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+        // lifecycleScope cancels on destroy, so a rotation or an early back press
+        // cannot fire the navigation into a dead Activity.
+        lifecycleScope.launch {
+            delay(SPLASH_DELAY_MS)
+            startActivity(Intent(this@SplashScreen, MainActivity::class.java))
             finish()
-        }, 2000)
+        }
+    }
+
+    private companion object {
+        const val SPLASH_DELAY_MS = 1400L
     }
 }

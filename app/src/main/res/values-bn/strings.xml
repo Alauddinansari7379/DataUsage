@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ডেটা ব্যবহার</string>
+    <string name="title_dashboard">ডেটা ব্যবহার</string>
+    <string name="live_throughput">লাইভ গতি</string>
+    <string name="download">ডাউনলোড</string>
+    <string name="upload">আপলোড</string>
+    <string name="mobile">মোবাইল</string>
+    <string name="wifi">ওয়াই-ফাই</string>
+    <string name="date">তারিখ</string>
+    <string name="hourly_title">আজ, ঘণ্টা ধরে</string>
+    <string name="hourly_subtitle">মোবাইল ও ওয়াই-ফাই মিলিয়ে</string>
+    <string name="breakdown_title">দৈনিক বিবরণ</string>
+    <string name="apps_title">সবচেয়ে বেশি ব্যবহারকারী অ্যাপ</string>
+    <string name="apps_subtitle">নির্বাচিত সময়ে মোট ব্যবহারের ভিত্তিতে</string>
+    <string name="summary_title">সারসংক্ষেপ</string>
+    <string name="stat_total">মোট ব্যবহার</string>
+    <string name="stat_average">দৈনিক গড়</string>
+    <string name="stat_peak">সবচেয়ে ব্যস্ত দিন</string>
+    <string name="stat_projection">30 দিনের পূর্বাভাস</string>
+    <string name="range_7">7 দিন</string>
+    <string name="range_30">30 দিন</string>
+    <string name="range_60">60 দিন</string>
+    <string name="range_90">90 দিন</string>
+    <string name="range_title_7">শেষ 7 দিন</string>
+    <string name="range_title_30">শেষ 30 দিন</string>
+    <string name="range_title_60">শেষ 60 দিন</string>
+    <string name="range_title_90">শেষ 90 দিন</string>
+    <string name="trend_up">আগের চেয়ে +%1$d%%</string>
+    <string name="trend_down">আগের চেয়ে %1$d%%</string>
+    <string name="trend_flat">আগের মতোই</string>
+    <string name="conn_offline">অফলাইন</string>
+    <string name="conn_connected">সংযুক্ত</string>
+    <string name="app_tethering">টিথারিং</string>
+    <string name="app_uninstalled">আনইনস্টল করা অ্যাপ</string>
+    <string name="app_system">Android সিস্টেম</string>
+    <string name="app_unknown">সিস্টেম সার্ভিস (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">অ্যাপ আইকন</string>
+    <string name="permission_title">ব্যবহারের অনুমতি প্রয়োজন</string>
+    <string name="permission_body">Android শুধু Usage Access আছে এমন অ্যাপকে প্রতি-অ্যাপ ও পুরোনো ডেটা ব্যবহারের তথ্য দেয়। নিজের ব্যবহার দেখতে অনুমতি দিন।</string>
+    <string name="permission_action">সেটিংস খুলুন</string>
+    <string name="permission_toast">ডেটা দেখতে ব্যবহারের অনুমতি দিন</string>
+    <string name="no_apps">এই সময়ে কোনো অ্যাপের ব্যবহার নেই</string>
+    <string name="no_usage_yet">এখনও কোনো ব্যবহার রেকর্ড হয়নি</string>
+    <string name="load_failed">ব্যবহারের ডেটা পড়া যায়নি</string>
+    <string name="language">ভাষা</string>
+    <string name="language_system">সিস্টেম ডিফল্ট</string>
+
+    <plurals name="day_count">
+        <item quantity="one">%1$d দিন</item>
+        <item quantity="other">%1$d দিন</item>
+    </plurals>
+</resources>

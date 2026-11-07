@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Selected segment: reads as a lit, raised lozenge sitting above the track. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/glass_radius_pill" />
+            <gradient
+                android:angle="270"
+                android:startColor="#994DE8FF"
+                android:endColor="#99A78BFA"
+                android:type="linear" />
+            <stroke android:width="@dimen/glass_rim" android:color="@color/glass_rim_dark" />
+        </shape>
+    </item>
+    <item android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/glass_radius_pill" />
+            <solid android:color="@color/transparent" />
+            <stroke android:width="@dimen/glass_rim" android:color="@color/glass_rim_light" />
+        </shape>
+    </item>
+    <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/glass_radius_pill" />
+            <gradient
+                android:angle="270"
+                android:startColor="@color/glass_specular"
+                android:centerColor="@color/transparent"
+                android:endColor="@color/transparent"
+                android:centerY="0.35"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

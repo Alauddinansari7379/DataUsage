@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">流量使用</string>
+    <string name="title_dashboard">流量使用</string>
+    <string name="live_throughput">实时速率</string>
+    <string name="download">下载</string>
+    <string name="upload">上传</string>
+    <string name="mobile">移动数据</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="date">日期</string>
+    <string name="hourly_title">今日逐小时</string>
+    <string name="hourly_subtitle">移动数据与 Wi-Fi 合计</string>
+    <string name="breakdown_title">每日明细</string>
+    <string name="apps_title">流量最多的应用</string>
+    <string name="apps_subtitle">按所选时段的总流量排序</string>
+    <string name="summary_title">概览</string>
+    <string name="stat_total">总用量</string>
+    <string name="stat_average">日均用量</string>
+    <string name="stat_peak">用量最高的一天</string>
+    <string name="stat_projection">30 天预测</string>
+    <string name="range_7">7 天</string>
+    <string name="range_30">30 天</string>
+    <string name="range_60">60 天</string>
+    <string name="range_90">90 天</string>
+    <string name="range_title_7">最近 7 天</string>
+    <string name="range_title_30">最近 30 天</string>
+    <string name="range_title_60">最近 60 天</string>
+    <string name="range_title_90">最近 90 天</string>
+    <string name="trend_up">较上期 +%1$d%%</string>
+    <string name="trend_down">较上期 %1$d%%</string>
+    <string name="trend_flat">与上期持平</string>
+    <string name="conn_offline">离线</string>
+    <string name="conn_connected">已连接</string>
+    <string name="app_tethering">网络共享</string>
+    <string name="app_uninstalled">已卸载的应用</string>
+    <string name="app_system">Android 系统</string>
+    <string name="app_unknown">系统服务 (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">应用图标</string>
+    <string name="permission_title">需要使用情况访问权限</string>
+    <string name="permission_body">Android 仅向拥有使用情况访问权限的应用提供各应用及历史流量数据。授予后即可查看你的流量。</string>
+    <string name="permission_action">打开设置</string>
+    <string name="permission_toast">请授予使用情况访问权限</string>
+    <string name="no_apps">此时段内没有应用流量记录</string>
+    <string name="no_usage_yet">尚未记录到流量</string>
+    <string name="load_failed">无法读取流量数据</string>
+    <string name="language">语言</string>
+    <string name="language_system">跟随系统</string>
+
+    <plurals name="day_count">
+        <item quantity="other">%1$d 天</item>
+    </plurals>
+</resources>

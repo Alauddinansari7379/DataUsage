@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Расход трафика</string>
+    <string name="title_dashboard">Расход трафика</string>
+    <string name="live_throughput">ТЕКУЩАЯ СКОРОСТЬ</string>
+    <string name="download">Загрузка</string>
+    <string name="upload">Отдача</string>
+    <string name="mobile">Мобильный</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="date">Дата</string>
+    <string name="hourly_title">Сегодня по часам</string>
+    <string name="hourly_subtitle">Мобильный и Wi-Fi вместе</string>
+    <string name="breakdown_title">По дням</string>
+    <string name="apps_title">Больше всего трафика</string>
+    <string name="apps_subtitle">По суммарному трафику за выбранный период</string>
+    <string name="summary_title">Сводка</string>
+    <string name="stat_total">Всего израсходовано</string>
+    <string name="stat_average">В среднем за день</string>
+    <string name="stat_peak">Пиковый день</string>
+    <string name="stat_projection">Прогноз на 30 дней</string>
+    <string name="range_7">7 дней</string>
+    <string name="range_30">30 дней</string>
+    <string name="range_60">60 дней</string>
+    <string name="range_90">90 дней</string>
+    <string name="range_title_7">Последние 7 дней</string>
+    <string name="range_title_30">Последние 30 дней</string>
+    <string name="range_title_60">Последние 60 дней</string>
+    <string name="range_title_90">Последние 90 дней</string>
+    <string name="trend_up">+%1$d%% к прошлому</string>
+    <string name="trend_down">%1$d%% к прошлому</string>
+    <string name="trend_flat">Без изменений</string>
+    <string name="conn_offline">Нет сети</string>
+    <string name="conn_connected">Подключено</string>
+    <string name="app_tethering">Режим модема</string>
+    <string name="app_uninstalled">Удалённые приложения</string>
+    <string name="app_system">Система Android</string>
+    <string name="app_unknown">Системная служба (uid %1$d)</string>
+    <string name="app_usage_detail">↓ %1$s  ·  ↑ %2$s</string>
+    <string name="app_icon">Значок приложения</string>
+    <string name="permission_title">Нужен доступ к статистике</string>
+    <string name="permission_body">Android передаёт статистику по приложениям и историю трафика только приложениям с доступом к данным об использовании. Разрешите доступ, чтобы увидеть свой трафик.</string>
+    <string name="permission_action">Открыть настройки</string>
+    <string name="permission_toast">Разрешите доступ к статистике использования</string>
+    <string name="no_apps">За этот период трафика приложений нет</string>
+    <string name="no_usage_yet">Трафик пока не зафиксирован</string>
+    <string name="load_failed">Не удалось прочитать данные</string>
+    <string name="language">Язык</string>
+    <string name="language_system">Как в системе</string>
+
+    <plurals name="day_count">
+        <item quantity="one">%1$d день</item>
+        <item quantity="few">%1$d дня</item>
+        <item quantity="many">%1$d дней</item>
+        <item quantity="other">%1$d дня</item>
+    </plurals>
+
+    <string-array name="byte_units">
+        <item>Б</item>
+        <item>КБ</item>
+        <item>МБ</item>
+        <item>ГБ</item>
+        <item>ТБ</item>
+        <item>ПБ</item>
+    </string-array>
+    <string-array name="speed_units">
+        <item>Б/с</item>
+        <item>КБ/с</item>
+        <item>МБ/с</item>
+    </string-array>
+    <string-array name="speed_units_bits">
+        <item>бит/с</item>
+        <item>Кбит/с</item>
+        <item>Мбит/с</item>
+    </string-array>
+</resources>

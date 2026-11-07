@@ -2,41 +2,43 @@ package dev.jahidhasanco.datausage.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
- import com.alauddin.datausagen.databinding.ItemDailyUsagesBinding
+import com.alauddin.datausagen.databinding.ItemDailyUsagesBinding
 import dev.jahidhasanco.datausage.data.model.UsagesData
 
-class DataUsagesAdapter(private val dataUsages: List<UsagesData>) :
-    RecyclerView.Adapter<DataUsagesAdapter.DataUsagesViewHolder>() {
+class DataUsagesAdapter : ListAdapter<UsagesData, DataUsagesAdapter.DataUsagesViewHolder>(DIFF) {
 
-    inner class DataUsagesViewHolder(
+    class DataUsagesViewHolder(
         private val binding: ItemDailyUsagesBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: UsagesData) {
             binding.apply {
                 tvDate.text = item.date
-                wifiData.text = item.wifi
                 mobileData.text = item.mobile
+                wifiData.text = item.wifi
+                dayBar.progress = item.sharePercent
             }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataUsagesViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val dataBinding = ItemDailyUsagesBinding.inflate(
-            layoutInflater,
-            parent,
-            false
-        )
-
-        return DataUsagesViewHolder(dataBinding)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = DataUsagesViewHolder(
+        ItemDailyUsagesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+    )
 
     override fun onBindViewHolder(holder: DataUsagesViewHolder, position: Int) {
-        val item = dataUsages[position]
-        holder.bind(item)
+        holder.bind(getItem(position))
     }
 
-    override fun getItemCount(): Int = dataUsages.size
+    private companion object {
+        val DIFF = object : DiffUtil.ItemCallback<UsagesData>() {
+            override fun areItemsTheSame(oldItem: UsagesData, newItem: UsagesData) =
+                oldItem.date == newItem.date
+
+            override fun areContentsTheSame(oldItem: UsagesData, newItem: UsagesData) =
+                oldItem == newItem
+        }
+    }
 }
